@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shadcn Charts Web
 
-## Getting Started
+![Screenshot do Portfólio](/public/home-page.png)
 
-First, run the development server:
+Este projeto é uma aplicação web que utiliza o Shadcn UI para exibir gráficos interativos. O Shadcn UI é uma coleção de componentes de interface do usuário que podem ser copiados e colados em seus aplicativos, proporcionando uma experiência de desenvolvimento mais rápida e consistente.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias Utilizadas
+
+[![Next.js](https://skillicons.dev/icons?i=nextjs)](https://nextjs.org/) [![TypeScript](https://skillicons.dev/icons?i=typescript)](https://www.typescriptlang.org/) [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind)](https://tailwindcss.com/) [![ShadCN UI](https://shadcn.dev)](https://ui.shadcn.com/)
+
+- **Next.js 15:** Framework React para desenvolvimento de aplicações web.
+- **TypeScript:** Superset do JavaScript que adiciona tipagem estática ao código.
+- **Tailwind CSS:** Framework de CSS utilitário para estilização rápida e eficiente.
+- **Shadcn UI:** Coleção de componentes de UI que podem ser integrados facilmente ao projeto.
+
+## 📌 Instalação
+
+Para configurar o ambiente de desenvolvimento, siga os passos abaixo:
+
+1. Clone o repositório:
+
+   ```sh
+   git clone https://github.com/Cardosofiles/shadcn-charts-web.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```sh
+   cd shadcn-charts-web
+   ```
+
+3. Instale as dependências:
+
+   ```sh
+   npm install
+   ```
+
+   ou
+
+   ```sh
+   yarn install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```sh
+   npm run dev
+   ```
+
+   ou
+
+   ```sh
+   yarn dev
+   ```
+
+O aplicativo estará disponível em `http://localhost:3000`.
+
+## 📂 Estrutura do Projeto
+
+```
+shadcn-charts-web/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── .gitignore
+├── components.json
+├── next.config.ts
+├── package.json
+├── README.md
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **public/**: Arquivos públicos, como imagens e fontes.
+- **src/**: Código-fonte do projeto.
+  - **components/**: Componentes reutilizáveis da interface.
+  - **pages/**: Páginas da aplicação.
+  - **styles/**: Arquivos de estilização.
+  - **utils/**: Funções utilitárias.
+- **components.json**: Configurações específicas dos componentes Shadcn UI.
+- **next.config.ts**: Configurações do Next.js.
+- **package.json**: Dependências e scripts do projeto.
+- **tsconfig.json**: Configurações do TypeScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 Scripts Disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No arquivo `package.json`, os seguintes scripts estão disponíveis:
 
-## Learn More
+- `dev`: Inicia o servidor de desenvolvimento.
+- `build`: Compila a aplicação para produção.
+- `start`: Inicia o servidor em modo de produção.
+- `lint`: Executa o linter para verificar problemas no código.
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Configuração do Shadcn UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto utiliza o Shadcn UI para os componentes de interface. Para adicionar novos componentes, utilize o CLI do Shadcn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npx shadcn add componente
+```
 
-## Deploy on Vercel
+Certifique-se de consultar a [documentação oficial](https://ui.shadcn.com/) para mais detalhes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🖼️ Visualização
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Imagem da Home Page](./public/homepage.png)  
+_Adicione aqui a imagem da home page do projeto._
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+
+## 📜 Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações.
+
+## 📌 Autor
+
+Desenvolvido por **João Batista** 🚀

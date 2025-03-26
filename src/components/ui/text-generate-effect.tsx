@@ -17,20 +17,23 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
-      }
-    );
-  }, [scope.current]);
+    // Certificando-se de que 'scope.current' é uma referência válida
+    if (scope.current) {
+      animate(
+        scope.current.children, // Aplica a animação aos filhos do 'scope'
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration,
+          delay: stagger(0.2),
+        }
+      );
+    }
+  }, [animate, filter, duration, scope.current]); // Dependências ajustadas para garantir que a animação seja chamada corretamente
 
   const renderWords = () => {
     return (
@@ -38,8 +41,7 @@ export const TextGenerateEffect = ({
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              key={word + idx}
+              key={word}
               className="dark:text-white text-black opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",

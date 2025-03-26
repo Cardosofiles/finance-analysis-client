@@ -17,8 +17,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { useIsMobile } from "@/hooks/use-mobile";
-import React from "react";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -41,15 +39,6 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function LineMultipleChart() {
-  const isMobile = useIsMobile();
-  const [timeRange, setTimeRange] = React.useState("90d");
-
-  React.useEffect(() => {
-    if (isMobile) {
-      setTimeRange("7d");
-    }
-  }, [isMobile]);
-
   return (
     <Card>
       <CardHeader>
